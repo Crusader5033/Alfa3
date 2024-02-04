@@ -45,13 +45,12 @@ namespace Alfa3.View
             else
             {
                 // Handle the case when the DataTable is null or an error occurs
-                MessageBox.Show("Error retrieving data from the database.");
+                MessageBox.Show("Chyba při získávání dat z databáze.");
             }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            // Call the ListVojaci method to get the DataTable
             var roleDataTable = roleController.ListRole();
 
             // Check if the DataTable is not null
@@ -69,7 +68,6 @@ namespace Alfa3.View
 
         private void UtvaryBtn_Click(object sender, EventArgs e)
         {
-            // Call the ListVojaci method to get the DataTable
             var utvarDataTable = utvarController.Listutvary();
 
             // Check if the DataTable is not null
@@ -87,7 +85,6 @@ namespace Alfa3.View
 
         private void SpecializaceBtn_Click(object sender, EventArgs e)
         {
-            // Call the ListVojaci method to get the DataTable
             var specializaceDataTable = specializaceController.ListSpecializace();
 
             // Check if the DataTable is not null
@@ -105,7 +102,6 @@ namespace Alfa3.View
 
         private void SluzbyBtn_Click(object sender, EventArgs e)
         {
-            // Call the ListVojaci method to get the DataTable
             var sluzbyDataTable = sluzbaController.ListSluzby();
 
             // Check if the DataTable is not null
@@ -117,7 +113,7 @@ namespace Alfa3.View
             else
             {
                 // Handle the case when the DataTable is null or an error occurs
-                MessageBox.Show("Error retrieving data from the database.");
+                MessageBox.Show("Chyba při získávání dat z databáze.");
             }
         }
 
@@ -134,13 +130,12 @@ namespace Alfa3.View
             else
             {
                 // Handle the case when the DataTable is null or an error occurs
-                MessageBox.Show("Error retrieving data from the database.");
+                MessageBox.Show("Chyba při získávání dat z databáze.");
             }
         }
 
         private void ZkouskaBtn_Click(object sender, EventArgs e)
         {
-            // Call the ListVojaci method to get the DataTable
             var zkouskyDataTable = zkouskaController.ListZkousky();
 
             // Check if the DataTable is not null
@@ -152,7 +147,7 @@ namespace Alfa3.View
             else
             {
                 // Handle the case when the DataTable is null or an error occurs
-                MessageBox.Show("Error retrieving data from the database.");
+                MessageBox.Show("Chyba při získávání dat z databáze.");
             }
         }
     }

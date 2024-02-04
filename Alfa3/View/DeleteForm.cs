@@ -29,25 +29,20 @@ namespace Alfa3.View
 
         private void LoadUtvaryIntoDataGridView()
         {
-            // Call the ListVojaci method to get the DataTable
             var utvarDataTable = utvarController.Listutvary();
 
-            // Check if the DataTable is not null
             if (utvarDataTable != null)
             {
-                // Bind the DataTable to the DataGridView
                 dataGridViewUtvar.DataSource = utvarDataTable;
             }
             else
             {
-                // Handle the case when the DataTable is null or an error occurs
-                MessageBox.Show("Error retrieving data from the database.");
+                MessageBox.Show("Chyba při získávání dat z databáze.");
             }
         }
 
         private void LoadSluzbyIntoDataGridView()
         {
-            // Call the ListVojaci method to get the DataTable
             var sluzbyDataTable = sluzbaController.ListSluzbyWithID();
 
             // Check if the DataTable is not null
@@ -58,8 +53,7 @@ namespace Alfa3.View
             }
             else
             {
-                // Handle the case when the DataTable is null or an error occurs
-                MessageBox.Show("Error retrieving data from the database.");
+                MessageBox.Show("Chyba při získávání dat z databáze.");
             }
         }
 
@@ -67,7 +61,6 @@ namespace Alfa3.View
         {
             var vojaciDataTable = vojakController.ListVojaci();
 
-            // Check if the DataTable is not null
             if (vojaciDataTable != null)
             {
                 // Bind the DataTable to the DataGridView
@@ -76,7 +69,7 @@ namespace Alfa3.View
             else
             {
                 // Handle the case when the DataTable is null or an error occurs
-                MessageBox.Show("Error retrieving data from the database.");
+                MessageBox.Show("Chyba při získávání dat z databáze.");
             }
         }
     
@@ -86,7 +79,6 @@ namespace Alfa3.View
             {
                 if (dataGridViewVojak.SelectedRows.Count > 0)
                 {
-                    // Get the selected Vojak's ID from the DataGridView
                     int selectedVojakId = Convert.ToInt32(dataGridViewVojak.SelectedRows[0].Cells["id"].Value);
 
                     // Show a confirmation dialog
@@ -103,12 +95,12 @@ namespace Alfa3.View
                         // Reload the DataGridView to reflect the changes
                         LoadVojaciIntoDataGridView();
 
-                        MessageBox.Show("Vojak byl odstraněn.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Vojak byl odstraněn.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Vyberte záznam.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Vyberte záznam.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
@@ -140,18 +132,18 @@ namespace Alfa3.View
                 {
                     int selectedSluzbaId = Convert.ToInt32(dataGridViewSluzba.SelectedRows[0].Cells["id"].Value);
 
-                    DialogResult result = MessageBox.Show("Opravdu chcete smazat tento zaznam?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    DialogResult result = MessageBox.Show("Opravdu chcete smazat tento zaznam?", "Potvrzeni", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                     if (result == DialogResult.Yes)
                     {
                         sluzbaController.DeleteSluzba(selectedSluzbaId);
                         LoadSluzbyIntoDataGridView();
-                        MessageBox.Show("Záznam byl úspěšně odstraněn.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Záznam byl úspěšně odstraněn.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Vyberte záznam.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Vyberte záznam.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
@@ -176,18 +168,23 @@ namespace Alfa3.View
 
                         utvarController.DeleteUtvar(selectedUtvarId);
                         LoadUtvaryIntoDataGridView();
-                        MessageBox.Show("Utvar byl úspěšně odstraněn.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Utvar byl úspěšně odstraněn.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Vyberte záznam.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Vyberte záznam.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Nastala chyba.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void DeleteForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

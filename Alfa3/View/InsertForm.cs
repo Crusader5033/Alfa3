@@ -311,17 +311,14 @@ namespace Alfa3.View
         {
             try
             {
-                // Get selected Vojak and Utvar IDs from ComboBoxes
                 int selectedVojakId = Convert.ToInt32(VojakCombo.SelectedValue);
                 int selectedSpecializaceId = Convert.ToInt32(specializaceCombo.SelectedValue);
                 string vysledek = resultBox.Text;
                 string mistoZkousky = kdeBox.Text;
 
 
-                // Get other data from your form as needed
                 DateTime datum = whenPick.SelectionStart;
 
-                // Use the selected IDs to add a new Sluzba
                 zkouskaController.AddZkouska(selectedVojakId, selectedSpecializaceId, mistoZkousky, vysledek, datum);
 
                 MessageBox.Show("Sluzba byla úspěšně přidána.", "Informace", MessageBoxButtons.OK, MessageBoxIcon.Information);

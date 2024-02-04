@@ -38,6 +38,10 @@
             this.VojakBtn = new System.Windows.Forms.Button();
             this.sluzbaBtn = new System.Windows.Forms.Button();
             this.utvarBtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.Sluzba.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVojak)).BeginInit();
@@ -60,6 +64,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.dataGridViewVojak);
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
@@ -75,7 +80,7 @@
             this.dataGridViewVojak.AllowUserToDeleteRows = false;
             this.dataGridViewVojak.AllowUserToOrderColumns = true;
             this.dataGridViewVojak.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewVojak.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewVojak.Location = new System.Drawing.Point(7, 0);
             this.dataGridViewVojak.Name = "dataGridViewVojak";
             this.dataGridViewVojak.ReadOnly = true;
             this.dataGridViewVojak.RowTemplate.Height = 28;
@@ -85,6 +90,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Controls.Add(this.dataGridViewSluzba);
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
@@ -100,7 +106,7 @@
             this.dataGridViewSluzba.AllowUserToDeleteRows = false;
             this.dataGridViewSluzba.AllowUserToOrderColumns = true;
             this.dataGridViewSluzba.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewSluzba.Location = new System.Drawing.Point(2, 1);
+            this.dataGridViewSluzba.Location = new System.Drawing.Point(6, 0);
             this.dataGridViewSluzba.Name = "dataGridViewSluzba";
             this.dataGridViewSluzba.ReadOnly = true;
             this.dataGridViewSluzba.RowTemplate.Height = 28;
@@ -110,6 +116,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.label4);
             this.tabPage3.Controls.Add(this.dataGridViewUtvar);
             this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Name = "tabPage3";
@@ -125,7 +132,7 @@
             this.dataGridViewUtvar.AllowUserToDeleteRows = false;
             this.dataGridViewUtvar.AllowUserToOrderColumns = true;
             this.dataGridViewUtvar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewUtvar.Location = new System.Drawing.Point(2, 1);
+            this.dataGridViewUtvar.Location = new System.Drawing.Point(3, 0);
             this.dataGridViewUtvar.Name = "dataGridViewUtvar";
             this.dataGridViewUtvar.ReadOnly = true;
             this.dataGridViewUtvar.RowTemplate.Height = 28;
@@ -163,25 +170,67 @@
             this.utvarBtn.UseVisualStyleBackColor = true;
             this.utvarBtn.Click += new System.EventHandler(this.utvarBtn_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(-1, 267);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(95, 20);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Kliknout zde";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(-8, 18);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(23, 20);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "->\r\n";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(-4, 16);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(23, 20);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "->\r\n";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(-1, 16);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(23, 20);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "->\r\n";
+            // 
             // DeleteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.utvarBtn);
             this.Controls.Add(this.sluzbaBtn);
             this.Controls.Add(this.VojakBtn);
             this.Controls.Add(this.Sluzba);
             this.Name = "DeleteForm";
             this.Text = "Smazani";
+            this.Load += new System.EventHandler(this.DeleteForm_Load);
             this.Sluzba.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVojak)).EndInit();
             this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSluzba)).EndInit();
             this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUtvar)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -197,5 +246,9 @@
         private System.Windows.Forms.DataGridView dataGridViewUtvar;
         private System.Windows.Forms.Button sluzbaBtn;
         private System.Windows.Forms.Button utvarBtn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
