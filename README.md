@@ -1,4 +1,4 @@
-# Okenn9 aplikace pro správu služby vojáka
+# Okenní aplikace pro správu služby vojáka
 
 ## Obsah
 
