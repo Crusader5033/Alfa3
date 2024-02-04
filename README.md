@@ -1,4 +1,4 @@
-# Dokumentace pro Okenní Aplikaci spravující MSSQL DB
+# Okenn9 aplikace pro správu služby vojáka
 
 ## Obsah
 
