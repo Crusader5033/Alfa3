@@ -88,6 +88,7 @@ Pro zajištění efektivního připojení k databázi se využívá singleton t�
 Pro každou tabulku existuje Controller a Model třída , uživatel pracuje oknem které následně pracuje s Controllerem a následně Model s DB. Například `RoleController` a `Role` pro tabulku `Role` ,.
 
 ## 5. Struktura Aplikace
+![Výstřižek](https://github.com/Crusader5033/Alfa3/assets/113086006/e798132d-2ade-463d-b80c-1ea692e762f4)
 
 ### 5.1 Okenní Okna
 Aplikace obsahuje několik okenních oken:
